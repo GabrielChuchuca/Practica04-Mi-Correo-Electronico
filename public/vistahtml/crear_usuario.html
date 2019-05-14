@@ -11,9 +11,9 @@
         <h>Creacion de nuevos usuarios</h>
     </header>
 <section>
-        <form align="left" action="" method="POST" onsubmit="validarCamposObligatorios()" onsubmit="validarCedulaEcuatoriana()">
+        <form align="left" action="" method="POST" onsubmit="validarCamposObligatorios()">
             <label id="cedula">Cedula (*):</label>
-            <input name="custCedula" id="cedula" type="text" placeholder="Ingrese el número de cedula ..." />
+            <input name="custCedula" id="cedula" type="text" placeholder="Ingrese el número de cedula ..." onblur="validarCedulaEcuatoriana()"/>
             <span id="mensajeCedula"></span><br><br>
             
             <label for="nombres">Nombre (*):</label>
