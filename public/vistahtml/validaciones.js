@@ -21,15 +21,61 @@ function validarCamposObligatorios(){
             if(elemento.id == 'fecha_nacimiento'){
                 document.getElementById('mensajeFecNac').innerHTML = '<br>La fecha de nacimiento esta vacia'
             }
-
-           
+            if(elemento.id == 'correo'){
+                document.getElementById('mensajeCorreo').innerHTML = '<br>El correo esta vacio'
+            }
             elemento.style.border = '1px red solid'
             //elemento.className =''
             bandera = false
         }
     }
     if(!bandera){
-        alert('Ahora si llena bn oe ')
+        //alert('Ahora si llena bn oe ')
     }
     return bandera
 }
+
+function soloLetras(){
+    key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toUpperCase;
+       letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+       especiales = "8-37-39-46";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+            return false;
+        }
+}
+function validarCedulaEcuatoriana(){
+    var cad = document.getElementById("cedula").value.trim();
+    var total = 0;
+    var longitud = cad.length;
+    var longcheck = longitud - 1;
+
+    if (cad !== "" && longitud === 10){
+      for(i = 0; i < longcheck; i++){
+        if (i%2 === 0) {
+          var aux = cad.charAt(i) * 2;
+          if (aux > 9) aux -= 9;
+          total += aux;
+        } else {
+          total += parseInt(cad.charAt(i)); // parseInt o concatenará en lugar de sumar
+        }
+      }
+
+      total = total % 10 ? 10 - total % 10 : 0;
+
+      if (cad.charAt(longitud-1) == total) {
+        document.getElementById("mensajeCedula").innerHTML = '<br>Cedula Valida';
+      }else{
+        document.getElementById("MensajeCedula").innerHTML = '<br>Cedula Invalida';
+      }
+    }
+  }
