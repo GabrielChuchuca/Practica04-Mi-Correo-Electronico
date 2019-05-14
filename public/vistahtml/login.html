@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Iniciar sesión</title>
+    <meta charset="UTF-8"/>
+</head>
+
+<body>
+    <header align="center">
+        <h>Inicio de Sesion</h>
+    </header>
+    <form align="center" action="../controladoresphp/login.php" method="POST">
+        <label for="correo">Usuario:</label>
+        <input name="custCorreo" id="correo" type="email" placeholder="Ingrese el correo ..."/><br><br>
+
+        <label for="contrasena">Contraseña:</label>
+        <input name="custContrasena" id="contrasena" type="password" placeholder="Ingrese su contraseña ..."/><br><br>
+
+        <br>
+        <br>
+        <input type="submit" id="login" name="login" value="Iniciar Sesión" />&nbsp;
+        <input class="btn" type="reset" value="Cancelar"/>
+        
+    </form>
+
+</body>
+
+</html>
