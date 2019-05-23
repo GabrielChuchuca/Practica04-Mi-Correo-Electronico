@@ -26,10 +26,10 @@
     $rol = "";
 
     if (isset($_POST["rol2"])) {
-        echo "se presiono el checkbox usuario";
+        //echo "se presiono el checkbox usuario";
         $rol = "usua";
     } else if (isset($_POST["rol3"])) {
-        echo "se presiono el cbox de admin";
+        //echo "se presiono el cbox de admin";
         $rol = "admin";
     }
 
@@ -41,13 +41,10 @@
     //Si existe imagen y tiene un tamaño correcto
     if (($nombre_img == !NULL) && ($_FILES['imagen']['size'] <= 900000)) {
         //indicamos los formatos que permitimos subir a nuestro servidor
-        if (($_FILES["imagen"]["type"] == "image/gif")
-            || ($_FILES["imagen"]["type"] == "image/jpeg")
-            || ($_FILES["imagen"]["type"] == "image/jpg")
-            || ($_FILES["imagen"]["type"] == "image/png")
+        if (($_FILES["imagen"]["type"] == "image/gif") || ($_FILES["imagen"]["type"] == "image/jpeg") || ($_FILES["imagen"]["type"] == "image/jpg") || ($_FILES["imagen"]["type"] == "image/png")
         ) {
             // Ruta donde se guardarán las imágenes que subamos
-            $directorio = $_SERVER['DOCUMENT_ROOT'] . '/SistemaGestion/imagenes/';
+            $directorio = $_SERVER['DOCUMENT_ROOT'] . '/Practica04-Mi-Correo-Electronico/imagenes/';
             // Muevo la imagen desde el directorio temporal a nuestra ruta indicada anteriormente
             move_uploaded_file($_FILES['imagen']['tmp_name'], $directorio . $nombre_img);
         } else {

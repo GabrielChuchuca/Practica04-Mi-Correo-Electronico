@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <title>Gestion de Usuarios</title>
     <script type="text/javascript" src="../../../public/vista/ajax.js"></script>
-    <link href="../../../public/vista/css/estilousuario.css" rel="stylesheet" type="text/css" />
+
 
 </head>
 
-<body class="fondo">
-    <section id="secin">
+<body>
+    <section>
         <div class="cb">
             <header>
                 <?php
@@ -42,7 +42,7 @@
         </div>
 
         <div id="ifm">
-            <img id="tmn" src="../../../imagenes/<?php echo $rlt; ?>" alt="" />
+            <img id="tmn" src="../../../fotografia/<?php echo $rlt; ?>" alt="" />
             <br>
             <label id="cnt"><?php echo $nm;
                     echo "&nbsp;&nbsp;&nbsp;";

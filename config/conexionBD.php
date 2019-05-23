@@ -3,7 +3,7 @@
 $servername="localhost";
 $username="root";
 $passsword="";
-$dbname="hypermedial";
+$dbname="hipermedial";
 //crear conexiom
 
 $conn = new mysqli($servername,$username,$passsword,$dbname);

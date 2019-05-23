@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <title>Gestion de Usuarios</title>
-    <link href="../../../public/vista/css/estilousuario.css" rel="stylesheet" type="text/css" />
+
 
 </head>
 
-<body class="fondo">
-    <section id="sect">
+<body >
+    <section>
         <div class="cb">
             <?php
             $cone = $_GET["cone"];

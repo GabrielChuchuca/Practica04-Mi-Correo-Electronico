@@ -7,14 +7,13 @@
           Date:   Abril 2019 -->
     <meta charset="utf-8" />
     <title>Mensaje</title>
-    <link href="../../../public/vista/css/estilousuario.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="validar.js"></script>
     <!--   <link href="css/estilo.css" rel="stylesheet" type="text/css"/>-->
 
 </head>
 
-<body class="fondo">
-    <section id="sect">
+<body>
+    <section>
         <div class="nvm">
             <?php
             $cone = $_GET["cone"];
@@ -50,12 +49,11 @@
                 </div>
             </form>
         </div>
-        <footer  id="ft">
-            <span> Medina Malki Katari &nbsp;
-                &#8226; Universidad Pilitecnica salesiana &#8226; <br />
-                <a href="mailto:malkiyupanki12@hotmail.com">malkiyupanki12@hotmail.com</a>&nbsp;&nbsp;Telefono:&nbsp;<a href="tel:098-286-5431">098-286-5431 </a>
-                &nbsp; &copy; Todos los derechos Reservados.</span>
-        </footer>
+        <footer>
+      Gabriel Leonardo Chuchuca Arevalo &#8226; Universidad Politecnica Salesiana &#8226; <a href="mailto:gchuchucaa@est.ups.edu.ec">gchuchucaa@est.ups.edu.ec</a> &#8226;  <a href="tel:+593-969375242">0969375242</a>
+    <br>© Todos los derechos reservados
+   </footer>
+
     </section>
 </body>
 

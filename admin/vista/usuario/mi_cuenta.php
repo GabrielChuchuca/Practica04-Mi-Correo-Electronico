@@ -2,19 +2,17 @@
 <html lang="es">
 
 <head>
-    <!--  Practica01 – Mi Blog  
-          Author: Malki Yupanki  
-          Date:   Abril 2019 -->
+
     <meta charset="utf-8" />
     <title>MI_CUENTA</title>
-    <link href="../../../public/vista/css/estilousuario.css" rel="stylesheet" type="text/css" />
 
-    <!--   <link href="css/estilo.css" rel="stylesheet" type="text/css"/>-->
+
+
 
 </head>
 
-<body class="fondo">
-    <section id="sect">
+<body>
+    <section>
         <div class="cb">
             <?php
             session_start();

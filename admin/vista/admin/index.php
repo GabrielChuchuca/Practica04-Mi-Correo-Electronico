@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <title>Gestion de Usuarios</title>
-    <link href="../../../public/vista/css/estiloadmin.css" rel="stylesheet" type="text/css" />
+    
 
 </head>
 
-<body  class="fondo">
-    <section id="secin">
+<body  >
+    <section >
         <div class="cb">
             <?php
             include '../../../config/conexionBD.php';

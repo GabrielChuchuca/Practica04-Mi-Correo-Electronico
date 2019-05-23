@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Modificar datos de persona</title>
-    <link href="../../../public/vista/css/estiloadmin.css" rel="stylesheet" type="text/css" />
+
 </head>
 
-<body class="fondo">
-    <section id="secin">
+<body>
+    <section>
         <div class="cb">
             <?php
             session_start();
