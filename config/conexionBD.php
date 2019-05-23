@@ -1,17 +1,20 @@
 <?php
+
 $servername="localhost";
-$username = "root";
-$password="";
-$dbname = "hipermedial";
+$username="root";
+$passsword="";
+$dbname="hypermedial";
+//crear conexiom
 
-//create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-$conn->set_charset("utf8");
+$conn = new mysqli($servername,$username,$passsword,$dbname);
 
-//check connection
-if($conn->connect_error){
-    die("Connection failed:" . $conn->connect_error );
+// verificar conecxion
+if ($conn->connect_error){
+    die("Connection failed: ". $conn->connect_error);
+    echo "error";
 }else{
-    echo "<script>alert('Conexion Exitosa');</script>";
+ //   echo "conexion exitosa";
 }
+
+
 ?>
