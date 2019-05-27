@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <title>Gestion de Usuarios</title>
-
+    <link href="../../../public/vista/estilos.css" rel="stylesheet" type="text/css" />
 
 </head>
 
-<body >
+<body background="../../../fuserr.jpg">
     <section>
-        <div class="cb">
+        <div>
             <?php
             $cone = $_GET["cone"];
             //  echo $cone;
@@ -37,9 +37,9 @@
                 <?php
                 include '../../../config/conexionBD.php';
                 $cone = $_GET["cone"];
-                 echo $cone;
+                echo 'Correo: ' . $cone;
                 $vr = "NO";
-                $sql = "SELECT * FROM mensaje WHERE men_remitente ='$cone' AND men_eliminado = '$vr' ORDER BY men_fecha DESC";
+                $sql = "SELECT * FROM mensajes WHERE men_remitente ='$cone' AND men_eliminado = '$vr' ORDER BY men_fecha DESC";
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
@@ -47,13 +47,12 @@
                         echo "   <td>" . $row["men_fecha"] . "</td>";
                         echo "   <td>" . $row['men_destinatario'] . "</td>";
                         echo "   <td>" . $row['men_asunto'] . "</td>";
-                        echo "   <td>" . "<a href='leer_envi.php?cone=" . $cone . "&codigo=" . $row['men_codigo'] . "'>Leer</a>" . "</td>";
-
+                        echo "   <td>" . "<a href='leer_enviados.php?cone=" . $cone . "&codigo=" . $row['men_codigo'] . "'>Leer</a>" . "</td>";
                         echo "</tr>";
                     }
                 } else {
                     echo "<tr>";
-                    echo " <td colspan='10'> No existe Usuarios </td>";
+                    echo " <td colspan='10'> No existe Mensajes Enviados </td>";
                     echo "</tr>";
                 }
 

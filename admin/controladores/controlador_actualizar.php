@@ -18,7 +18,8 @@
     $telefono = isset($_POST["telefono"]) ? trim($_POST["telefono"]) : null;
     $correo = isset($_POST["correo"]) ? trim($_POST["correo"]) : null;
     $fechaNacimiento = isset($_POST["fechaNacimiento"]) ? trim($_POST["fechaNacimiento"]) : null;
-    $usuco = $_POST["usuco"];  
+    $usuco = $_POST["usuco"]; 
+    $vrt = "'".$usuco."'"; 
 
     date_default_timezone_set("America/Guayaquil");
     $fecha = date('Y-m-d H:i:s', time());
@@ -40,7 +41,7 @@
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>";
     }
-    echo "<a href='../vista/usuario/index.php'>Regresar</a>";
+    echo "<a href='../vista/usuario/index_usuario.php'?cone=$vrt>Regresar</a>";
 
 
     $conn->close();

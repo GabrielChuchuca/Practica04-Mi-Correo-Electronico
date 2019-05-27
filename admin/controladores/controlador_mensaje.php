@@ -4,16 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <title>Insertar</title>
-    <style type="text/css" rel="stylesheet">
-        .error {
-            color: red;
-        }
-    </style>
+    
 </head>
 
 <body>
     <?php
-    include '../../../config/conexionBD.php';
+    include '../../config/conexionBD.php';
     $remi = isset($_POST["remitente"]) ? mb_strtolower(trim($_POST["remitente"]), 'UTF-8') : null;
     $des = isset($_POST["destinatario"]) ? mb_strtolower(trim($_POST["destinatario"]), 'UTF-8') : null;
     $asu = isset($_POST["asunto"]) ? mb_strtolower(trim($_POST["asunto"]), 'UTF-8') : null;
@@ -22,11 +18,11 @@
     date_default_timezone_set("America/Guayaquil");
     $fecha = date('Y-m-d H:i:s', time());
 
-    $sql = " INSERT INTO mensaje VALUES(0,'$fecha','$des','$remi','$asu','$mens','NO')";
+    $sql = " INSERT INTO mensajes VALUES(0,'$fecha','$des','$remi','$asu','$mens','NO')";
 
     if ($conn->query($sql) == TRUE) {
         echo "<p>Se envio el mensaje</p>";
-        header("Location:nuevo_mensaje.php?cone=$remi");
+        
 
     } else {
         if ($conn->ermo == 1062) {
@@ -37,7 +33,7 @@
     }
 
     $conn->close();
-    echo "<a href='../vista/crear_usuario.html'>Regresar</a>";
+    echo "<a href='../vista/usuario/nuevo_mensaje.php'?cone=$remi>Regresar</a>";
 
 
     ?>

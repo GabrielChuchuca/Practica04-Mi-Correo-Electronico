@@ -2,16 +2,18 @@
 <html lang="es">
 
 <head>
-     <meta charset="utf-8" />
+    <meta charset="utf-8" />
     <title>MI_CUENTA</title>
+
+    <link href="" rel="stylesheet" type="text/css" />
+
 
 </head>
 
-<body >
-    <section >
+<body background="../../../fuserr.jpg">
+    <section>
         <?php
         session_start();
-        echo "mensaje -----";
         $cone = $_GET["cone"];
         ?>
         <div class="cb">
@@ -25,14 +27,13 @@
             </header>
         </div>
         <?php
-        echo "mensaje -----";
         $cone = $_GET["cone"];
         echo $cone;
         $codi = $_GET["codigo"];
         echo $codi;
         include '../../../config/conexionBD.php';
         echo "</br>";
-        $sql = "SELECT * FROM mensaje WHERE men_codigo = '$codi'";
+        $sql = "SELECT * FROM mensajes WHERE men_codigo = '$codi'";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {

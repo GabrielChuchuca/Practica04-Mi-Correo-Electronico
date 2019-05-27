@@ -7,7 +7,7 @@
     
 </head>
 
-<body background="../../../fadminn.jpg">
+<body background="../../../fuserr.jpg">
     <section>
         <div>
             <?php
@@ -27,7 +27,7 @@
             <header>
                 <nav>
                     <ul>
-                        <li> <a href="index.php?cone=<?php echo "$ft"; ?>">Atras</a> </li>
+                        <li> <a href="index_usuario.php?cone=<?php echo "$ft"; ?>">Atras</a> </li>
                     </ul>
                 </nav>
             </header>
@@ -37,7 +37,7 @@
         ?>
         <h2>MODIFICAR CONTRASEÑA</h2>
         <div>
-            <form id="formulario01" method="POST" action="../../controladores/controlador_contrasena.php?cone=<?php echo $rlt ?>">
+            <form id="formulario01" method="POST" action="../../controladores/controlador_contra.php?cone=<?php echo $rlt ?>">
                 <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
                 <input type="hidden" id="usuco" name="usuco" value="<?php echo $ft ?>" />
 
@@ -50,7 +50,7 @@
                 <br>
                 <div id="mdv">
                     <input class="btn" type="submit" id="modificar" name="modificar" value="Modificar" />
-                    <button type="button" class="btn btn-default"> <a href="index.php?cone=<?php echo "$ft"; ?>">Cancelar</a></button>
+                    <button type="button" class="btn btn-default"> <a href="index_usuario.php?cone=<?php echo "$ft"; ?>">Cancelar</a></button>
                 </div>
             </form>
         </div>

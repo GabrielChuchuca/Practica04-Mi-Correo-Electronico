@@ -10,6 +10,7 @@
         
         //incluir conexión a la base de datos 
         include '../../config/conexionBD.php'; 
+        $rlt = $_GET["cone"];
         
         $codigo = $_POST["codigo"];     
         $contrasena1 = isset($_POST["contrasena1"]) ? trim($_POST["contrasena1"]) : null;
@@ -31,16 +32,10 @@
         
         if ($conn->query($sqlContrasena2) === TRUE) {
         echo "Se ha actualizado la contraseña correctamemte!!!<br>";
-        } else {
-        echo "<p>Error: " . mysqli_error($conn) . "</p>";
-        }
+        } } 
+        echo "<a href='../vista/usuario/mi_cuenta.php?cone=" . $rlt ."'>Regresar</a>"; 
+        $conn->close();
        
-        }else{
-        echo "<p>La contraseña actual no coincide con nuestros registros!!! </p>";
-        }
-        echo "<a href='../../vista/usuario/index.php'>Regresar</a>"; 
-        
-        $conn->close(); 
         
         ?> 
     </body> 

@@ -15,7 +15,7 @@ if($result->num_rows > 0){
     $_SESSION["isLogged"] == TRUE;
     if($rlt == "admin"){
        
-       header("Location:../../admin/vista/usuario/index_admin.php?cone='$usuario'");
+       header("Location:../../admin/vista/admin/index_admin.php?cone='$usuario'");
     }else{
 
         header("Location:../../admin/vista/usuario/index_usuario.php?cone='$usuario'");

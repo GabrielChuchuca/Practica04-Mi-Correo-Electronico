@@ -2,14 +2,18 @@
 <html lang="es">
 
 <head>
+    <!--  Practica01 – Mi Blog  
+          Author: Malki Yupanki  
+          Date:   Abril 2019 -->
     <meta charset="utf-8" />
     <title>Insertar</title>
+    <link href="" rel="stylesheet" type="text/css" />
 
 </head>
 
-<body>
-    <section id="secin">
-        <div class="cb">
+<body background="../../../fadminn.jpg">
+    <section>
+        <div>
             <?php
             session_start();
             $cedula = $_GET["codigo"];
@@ -43,7 +47,7 @@
             while ($row = $result->fetch_assoc()) {
                 ?>
                 <h2>ELIMINAR USUARIO</h2>
-                <div id="cvd">
+                <div>
 
                     <form id="formulario01" method="POST" action="../../controladores/controlador_eliminar.php">
 
@@ -82,7 +86,6 @@
       Gabriel Leonardo Chuchuca Arevalo &#8226; Universidad Politecnica Salesiana &#8226; <a href="mailto:gchuchucaa@est.ups.edu.ec">gchuchucaa@est.ups.edu.ec</a> &#8226;  <a href="tel:+593-969375242">0969375242</a>
     <br>© Todos los derechos reservados
    </footer>
-
             <?php
 
         }

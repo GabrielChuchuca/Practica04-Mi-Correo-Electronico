@@ -7,11 +7,8 @@
 <body>
     <?php  
     include '../../config/conexionBD.php';   
-    //incluir conexión a la base de datos     include '../../../config/conexionBD.php';  
     $codigo = $_POST["codigo"];
     $usuco = $_POST["usuco"];              
-    //Si voy a eliminar físicamente el registro de la tabla     
-    //$sql = "DELETE FROM usuario WHERE codigo = '$codigo'"; 
     date_default_timezone_set("America/Guayaquil");     
     $fecha = date('Y-m-d H:i:s', time()); 
     echo "$fecha";
@@ -19,11 +16,11 @@
     $sql = "UPDATE usuario SET usu_eliminado = 'S', usu_fecha_modificacion = '$fecha' WHERE usu_codigo = $codigo"; 
     if ($conn->query($sql) === TRUE) {                 
         echo "<p>Se ha eliminado los datos correctamemte!!!</p>";
-        header("Location:../vista/usuario/index.php?cone=$usuco");
+        
              
     } else {                 
         echo "<p>Error: " . $sql . "<br>" . mysqli_error($conn) . "</p>";             
-    }     echo "<a href='../vista/usuario/index.php'>Regresar</a>"; 
+    }     echo "<a href='../vista/admin/index.php'>Regresar</a>"; 
     $conn->close();      
     ?> 
 </body> </html>
